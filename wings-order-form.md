@@ -4,3 +4,10 @@ This repo contains a simple Rails app I created while I was a student at Launch 
 
 The app is fully tested with RSpec/Capybara. See test files in the `spec` folder. 
 
+###Setup Instructions
+* bundle install
+* rake db:create
+* rake db:migrate
+* rake db:seed
+* rake
+
