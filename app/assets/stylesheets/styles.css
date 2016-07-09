@@ -1,0 +1,18 @@
+body {
+  font-family: Arial; 
+  background-color: #ffd33b;
+  color: #121212;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+}
+
+.row {
+  flex: 0;
+  text-align: center;
+  margin: 30px 0;
+}

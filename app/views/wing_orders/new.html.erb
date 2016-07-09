@@ -1,37 +1,39 @@
 <h1>New Wing Order</h1>
 
-<%= form_for @wing_order do |f| %>
-  <div class="row">
-    <%= f.label :customer_name, "Full Name" %>
-    <%= f.text_field :customer_name %>
-  </div>
-
-  <div class="row">
-    <%= f.label :city, "City" %>
-    <%= f.text_field :city %>
-  </div>
-
-  <div class="row">
-    <%= f.label :state, "State" %>
-    <%= f.select(:state, options_for_select(@state_collection)) %>
-  </div>
-
-  <div class="row">
-    <%= f.label :quantity, "Quantity" %>
-    <%= f.collection_radio_buttons(:quantity, @quantity_collection, :first, :last) %>
-  </div>
-
-  <div class="row">
-    <%= f.label :ranch_dressing, "Add Ranch Dressing" %>
-    <%= f.check_box(:ranch_dressing) %><br />
-  </div>
-
-  <div class="row">
-    <%= f.label :quantity, "Flavors" %>
-    <%= f.collection_check_boxes(:flavors, Flavor.all, :id, :name)%><br />
-  </div>
-
-  <div class="row">
-    <%= f.submit "Place Order" %>
-  </div>
-<% end %>
+<div class='form-container'>
+  <%= form_for @wing_order do |f| %>
+    <div class='row'>
+      <%= f.label :customer_name, 'Name' %>
+      <%= f.text_field :customer_name %>
+    </div>
+  
+    <div class='row'>
+      <%= f.label :city, 'City' %>
+      <%= f.text_field :city %>
+    </div>
+  
+    <div class='row'>
+      <%= f.label :state, 'State' %>
+      <%= f.select(:state, options_for_select(@state_collection)) %>
+    </div>
+  
+    <div class='row'>
+      <%= f.label :quantity, 'Quantity' %>
+      <%= f.collection_radio_buttons(:quantity, @quantity_collection, :first, :last) %>
+    </div>
+  
+    <div class='row'>
+      <%= f.label :ranch_dressing, 'Add Ranch Dressing' %>
+      <%= f.check_box(:ranch_dressing) %><br />
+    </div>
+  
+    <div class='row'>
+      <%= f.label :quantity, 'Flavors' %>
+      <%= f.collection_check_boxes(:flavors, Flavor.all, :id, :name)%><br />
+    </div>
+  
+    <div class='row'>
+      <%= f.submit 'Place Order' %>
+    </div>
+  <% end %>
+</div>
