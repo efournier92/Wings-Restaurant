@@ -1,7 +1,7 @@
-<h1>Wing Orders</h1>
+<h1>Recent Orders</h1>
 
 <div class=".wing_orders">
-<%  @wing_orders.each do |wing_order| %>
+<% @wing_orders.each do |wing_order| %>
   <div class=".wing_order">
     <h2><%= wing_order.customer_name %></h2>
     <span><%= "#{wing_order.city}, #{wing_order.state}" %></span>
@@ -16,4 +16,4 @@
 <% end %>
 </div>
 
-<%= link_to "New Order", new_wing_order_path %>
+<%= link_to 'New Order', new_wing_order_path %>
